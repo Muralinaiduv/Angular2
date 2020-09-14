@@ -1,0 +1,53 @@
+<h1 class="page">Registration page</h1>
+<div class = "register">
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="id">Book ID</label>
+        <input type="number" formControlName="id" class="form-control" />
+        <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
+            <div *ngIf="f.id.errors.required">Book Id is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="title">Book Title</label>
+        <input type="text" formControlName="title" class="form-control" />
+        <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+            <div *ngIf="f.title.errors.required">Book Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="author">author</label>
+        <input type="text" formControlName="author" class="form-control"  />
+        <div *ngIf="submitted && f.author.errors" class="invalid-feedback">
+            <div *ngIf="f.author.errors.required">Author Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="price">price</label>
+        <input type="number" formControlName="price" class="form-control" />
+        <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+            <div *ngIf="f.price.errors.required">Price is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="description">description</label>
+        <input type="text" formControlName="description" class="form-control" />
+        <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+            <div *ngIf="f.description.errors.required">description is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="release">Release date</label>
+        <input type="text" formControlName="release" class="form-control" />
+        <div *ngIf="submitted && f.release.errors" class="invalid-feedback">
+            <div *ngIf="f.release.errors.required">Release Date is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary">Add Book</button>
+    </div>
+</form>
+</div>
+
+
+

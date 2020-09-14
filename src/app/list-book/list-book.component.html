@@ -1,0 +1,31 @@
+
+<table class="table table-condensed table-striped table-hover"  >
+    <thead> 
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Release Date</th>
+            <th>description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr  *ngFor='let books of book'>
+            <td  (click)="onClickAuthor(books.id)">{{ books.id }}</td>
+            <td >{{ books.title }}</td>
+            <td >{{ books.author }} </td>
+            <td>{{ books.price }}</td>
+            <td>{{ books.release }}</td>
+            <td>{{ books.description }}</td>
+            <button class="btn btn-primary" (click)="onRemoveClick(books.id)">Delete Book</button>
+        </tr>
+      
+        
+    </tbody>
+</table>
+
+<div class="registerButton">
+     <button class="btn btn-primary" (click)="onClickRegister()">Back to Register</button>
+</div>
+
