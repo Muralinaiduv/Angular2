@@ -1,5 +1,4 @@
-FROM node:latest as node
-RUN mkdir -p /app
+FROM node:12-alpine as node
 WORKDIR /app
 COPY package.json /app
 RUN npm install
