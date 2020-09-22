@@ -1,23 +1,19 @@
 version: 0.2
 
-phases:
-  install:
-    commands:
-      - echo installing nodejs...
-      - yum install -y nodejs
-      - echo installing yarn...
-  pre_build:
-    commands:
-      - echo installing dependencies...
-      - npm i -g @angular/cli
-      - npm install
-  build:
-    commands:
-      # - echo testing...
-      # - echo building...
-      - npm run build
-artifacts:
-  files:
-    - "**/*"
-  discard-paths: no
-  base-directory: './dist*'
+phases: 
+    install:
+        runtime-versions:
+            nodejs: 10
+        commands:
+            - echo "installing something"
+    pre_build:
+        commands: 
+            - echo "we are in the pre build phase"
+    build:
+        commands:
+            - echo "we are in the build block"
+            - echo "we will run some tests"
+           
+    post_build:
+        commands:
+            - echo "we are in the post build phase"
