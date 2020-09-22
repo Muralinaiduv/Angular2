@@ -37,6 +37,7 @@ get f() {
 onSubmit() {
   if (this.registerForm.valid) {
   this.bookService.addUser(this.registerForm.value).subscribe(data => {
+    console.log(data)
     this.submitted = true;
     this.registerForm.reset();
 

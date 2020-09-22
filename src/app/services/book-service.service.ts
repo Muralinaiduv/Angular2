@@ -11,7 +11,7 @@ export class BookService {
 
   books: Book[];
 
-  private serviceEndPoint = 'http://localhost:3000/book';
+  private serviceEndPoint = 'http://localhost:5500/books';
 
   constructor(private http: HttpClient) { }
 
@@ -33,7 +33,7 @@ getBook(id: number):
 }
 
 addUser(book: Book): Observable<Book[]> {
-    return this.http.post<Book[]>(this.serviceEndPoint + '/register/', book);
+    return this.http.post<Book[]>(this.serviceEndPoint, book);
  }
 }
 
