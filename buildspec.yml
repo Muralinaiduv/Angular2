@@ -15,9 +15,9 @@ phases:
     commands:
       # - echo testing...
       # - echo building...
-      - ng build --prod
+      - npm run build
 artifacts:
   files:
     - "**/*"
   discard-paths: no
-  base-directory: dist/app
+  base-directory: 'dist*'
