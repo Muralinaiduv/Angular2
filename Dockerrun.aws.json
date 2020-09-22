@@ -1,0 +1,11 @@
+{
+    "Image": {
+      "Name": "7893696231/murali_repos",
+      "update":"true"
+    },
+    "Ports": [
+      {
+        "ContainerPort": "8080"
+      }
+    ]
+  }
