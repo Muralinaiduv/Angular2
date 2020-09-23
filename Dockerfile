@@ -1,10 +1,21 @@
-FROM node:12-alpine as node
-WORKDIR /app
-COPY package.json /app
+FROM node AS build
+
+WORKDIR /usr/src/app
+
+COPY package.json package-lock.json ./
+
 RUN npm install
+
 COPY . .
+
 RUN npm run build
 
-FROM nginx:1.17.1-alpine
-COPY --from=node /app/dist/app /usr/share/nginx/html
+### STAGE 2: Run ###
+
+FROM nginx
+
+COPY nginx.conf /etc/nginx/nginx.conf
+
+COPY --from=build /usr/src/app/dist/booksweb-client /usr/share/nginx/html
+
 EXPOSE 8008
