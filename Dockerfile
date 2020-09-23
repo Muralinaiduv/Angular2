@@ -16,6 +16,6 @@ FROM nginx
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
-COPY --from=build /usr/src/app/dist/booksweb-client /usr/share/nginx/html
+COPY --from=build /usr/src/app/dist/app /usr/share/nginx/html
 
 EXPOSE 8008
