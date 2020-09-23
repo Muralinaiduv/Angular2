@@ -1,0 +1,12 @@
+{
+    "AWSDockerrunVersion": "1",
+    "Image": {
+        "Name": "7893696231/angular_coderepo",
+        "update": "true"
+    },
+    "ports": [
+        {
+            "ContainerPort": "3000"
+        }
+    ]
+}
