@@ -1,7 +1,7 @@
 {
     "AWSDockerrunVersion": "1",
     "Image": {
-        "Name": "7893696231/angular_coderepo",
+        "Name": "7893696231/angular_murali",
         "update": "true"
     },
     "ports": [
